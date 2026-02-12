@@ -1,12 +1,14 @@
-// Get button and body tags from HTML
 const button = document.getElementById('colorButton');
 const body = document.body;
 
-// Function to change background color randomly
 button.addEventListener('click', () => {
-    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-    body.style.backgroundColor = randomColor;
+    // Each time the button is pressed, it will add or remove the "dark-mode" class from the body tag
+    body.classList.toggle('dark-mode');
     
-    // Print to the console for verification (Press F12 in your browser to view)
-    console.log("New background color: " + randomColor);
+    // Change the text on the button so users know it
+    if (body.classList.contains('dark-mode')) {
+        button.textContent = "Switch to Light Mode";
+    } else {
+        button.textContent = "Switch to Dark Mode";
+    }
 });
