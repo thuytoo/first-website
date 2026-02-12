@@ -1,32 +1,62 @@
-<div class="container">
-    <header style="text-align: center; margin-bottom: 50px;">
-        <h1>Thuy To</h1>
-        <p class="subtitle">✨ On my way to become a Software Developer 🇫🇮</p>
-    </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuy To | Software Engineering Student</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="spotlight"></div>
 
     <nav>
-        <ul style="display: flex; justify-content: center; gap: 20px; list-style: none; margin-bottom: 40px;">
-            <li><a href="#about" style="text-decoration: none; font-weight: bold; color: #764ba2;">About</a></li>
-            <li><a href="#education" style="text-decoration: none; font-weight: bold; color: #764ba2;">Education</a></li>
-            <li><a href="#projects" style="text-decoration: none; font-weight: bold; color: #764ba2;">Projects</a></li>
+        <div class="logo">TT</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="mailto:your-email@example.com" class="resume-btn">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="about" class="section">
-        <h2>👋 About Me</h2>
-        <p>I'm a career switcher passionate about solving problems through code. My background in Hospitality helps me focus on user satisfaction.</p>
-    </section>
+    <main>
+        <section id="hero">
+            <p class="mono">Hi, my name is</p>
+            <h1 class="big-heading">Thuy To.</h1>
+            <h2 class="medium-heading">I build digital experiences.</h2>
+            <p class="description">
+                I'm a career switcher passionate about solving problems through code. 
+                My background in <strong>Hospitality</strong> helps me focus on user satisfaction and building products that truly serve people.
+            </p>
+        </section>
 
-    <section id="education" class="section">
-        <h2>🎓 Education</h2>
-        <div class="item">
-            <p><strong>Haaga-Helia UAS</strong> | BIT (2026 - Present)</p>
-            <p><strong>Haaga-Helia UAS</strong> | Hospitality (2024 - 2026)</p>
-            <p><strong>Metropolia UAS</strong> | Open UAS Courses</p>
+        <section id="about">
+            <h3 class="numbered-heading">About Me</h3>
+            <p>I am currently transitioning into the tech world, leveraging my service-oriented mindset to write cleaner, more efficient code. I enjoy the logic behind development and the creativity of front-end design.</p>
+        </section>
+
+        <section id="education">
+            <h3 class="numbered-heading">Education</h3>
+            <div class="edu-item">
+                <h4>Haaga-Helia UAS <span>| BIT</span></h4>
+                <p class="range">2026 - Present</p>
+            </div>
+            <div class="edu-item">
+                <h4>Haaga-Helia UAS <span>| Hospitality</span></h4>
+                <p class="range">2024 - 2026</p>
+            </div>
+            <div class="edu-item">
+                <h4>Metropolia UAS <span>| Open UAS Courses</span></h4>
+            </div>
+        </section>
+
+        <div class="social-links">
+            <a href="https://github.com/your-username" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/your-username" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
         </div>
-    </section>
+    </main>
 
-    <section id="contact" style="text-align: center;">
-        <button id="colorButton">✨ Switch Theme</button>
-    </section>
-</div>
+    <script src="script.js"></script>
+</body>
+</html>
