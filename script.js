@@ -1,16 +1,23 @@
+// Spotlight effect follow mouse
 document.addEventListener('mousemove', (e) => {
-    const spotlight = document.querySelector('.spotlight');
-    spotlight.style.setProperty('--x', `${e.clientX}px`);
-    spotlight.style.setProperty('--y', `${e.clientY}px`);
+    document.body.style.setProperty('--x', `${e.clientX}px`);
+    document.body.style.setProperty('--y', `${e.clientY}px`);
 });
 
-// Smooth reveal effect on scroll
+// Smooth Fade-in effect on scroll
+const observerOptions = { threshold: 0.1 };
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+    entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('show');
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
         }
     });
-});
+}, observerOptions);
 
-document.querySelectorAll('section').forEach((section) => observer.observe(section));
+document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = "0";
+    section.style.transform = "translateY(20px)";
+    section.style.transition = "all 0.6s ease-out";
+    observer.observe(section);
+});
