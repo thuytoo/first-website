@@ -1,32 +1,26 @@
+/* --- 1. BIẾN MÀU SẮC (IMPORTANT) --- */
 :root {
-    --dark-navy: #0a192f;
-    --light-navy: #112240;
-    --lightest-navy: #233554;
+    --black: #000000;
+    --dark-grey: #111111;
+    --light-grey: #1d1d1d;
     --slate: #8892b0;
-    --light-slate: #a8b2d1;
     --white: #e6f1ff;
-    --teal: #64ffda;
+    --teal: #64ffda; /* Màu xanh gốc */
+    --teal-tint: rgba(100, 255, 218, 0.1);
 }
 
 body {
-    background-color: var(--dark-navy);
+    background-color: var(--black);
     color: var(--slate);
-    font-family: 'sans-serif', 'Inter';
+    font-family: 'Inter', sans-serif;
     margin: 0;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
-/* Spotlight Effect */
-.spotlight {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background: radial-gradient(600px at var(--x, 0px) var(--y, 0px), rgba(29, 78, 216, 0.15), transparent 80%);
-    z-index: 3;
+/* --- 2. HEADER & NAV (DÀN HÀNG NGANG) --- */
+header {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    position: fixed; width: 100%; top: 0; z-index: 100;
 }
 
 nav {
@@ -34,73 +28,94 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background: rgba(10, 25, 47, 0.85);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.logo { color: var(--teal); font-weight: bold; font-size: 1.5rem; border: 2px solid var(--teal); padding: 5px 10px; }
+nav ul {
+    display: flex; /* Đưa các chữ về hàng ngang */
+    list-style: none;
+    gap: 30px;
+    margin: 0; padding: 0;
+}
 
-nav ul { display: flex; list-style: none; gap: 25px; }
-nav a { color: var(--white); text-decoration: none; font-size: 13px; font-family: monospace; }
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-family: monospace;
+}
+
 nav a:hover { color: var(--teal); }
+/* --- TẠO KHUNG CHO LOGO TT --- */
+.logo {
+    color: var(--teal);             /* Màu chữ xanh */
+    text-decoration: none;          /* Bỏ gạch chân */
+    font-family: monospace;         /* Font chữ kiểu code */
+    font-weight: bold;
+    font-size: 18px;
+    
+    /* Cấu hình khung giống nút Contact */
+    border: 2px solid var(--teal);  /* Viền xanh */
+    padding: 5px 10px;              /* Khoảng cách chữ và viền */
+    border-radius: 4px;             /* Bo góc nhẹ */
+    
+    transition: all 0.3s ease;      /* Hiệu ứng mượt */
+    display: inline-block;
+}
+
+.logo:hover {
+    background: var(--teal-tint);   /* Nền mờ khi di chuột vào */
+    transform: translateY(-2px);    /* Nhảy nhẹ lên trên */
+}
 
 .resume-btn {
     border: 1px solid var(--teal);
-    padding: 10px 15px;
+    padding: 8px 16px;
     border-radius: 4px;
     color: var(--teal) !important;
 }
 
+/* --- 3. MÀU SẮC HERO SECTION --- */
 main { padding: 0 10%; max-width: 1000px; margin: auto; }
+section { padding: 80px 0; }
+.mono-text { font-family: monospace; color: var(--teal); } /* Hi my name is */
+.big-heading { color: var(--white); font-size: 70px; margin: 10px 0; }
+.medium-heading { color: var(--slate); font-size: 50px; margin: 0; }
+.numbered-heading { color: var(--white); display: flex; align-items: center; }
+.numbered-heading::after { content: ""; width: 200px; height: 1px; background: var(--light-grey); margin-left: 20px; }
 
-section { padding: 100px 0; }
-
-.mono { font-family: monospace; color: var(--teal); margin-bottom: 10px; }
-.big-heading { color: var(--white); font-size: clamp(40px, 8vw, 80px); margin: 0; }
-.medium-heading { color: var(--slate); font-size: clamp(30px, 6vw, 60px); margin: 0; }
-.description { max-width: 500px; line-height: 1.5; margin-top: 20px; }
-
-.numbered-heading {
-    display: flex;
-    align-items: center;
-    color: var(--white);
-    font-size: 26px;
+/* --- 4. SKILLS GRID (2x2) --- */
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
 }
 
-.numbered-heading::after {
-    content: "";
-    display: block;
-    width: 300px;
-    height: 1px;
-    background: var(--lightest-navy);
-    margin-left: 20px;
+.skill-category {
+    background: var(--dark-grey);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 3px solid var(--teal); /* Vạch xanh */
 }
 
-.edu-item { margin-bottom: 30px; }
-.edu-item h4 { color: var(--white); margin-bottom: 5px; }
-.edu-item span { color: var(--teal); }
-.range { font-family: monospace; font-size: 13px; }
+.skill-category h4 { color: var(--white); margin-top: 0; }
+.skill-category h4 i { color: var(--teal); margin-right: 10px; }
+.skill-category ul { list-style: none; padding: 0; }
+.skill-category li::before { content: "▹"; color: var(--teal); margin-right: 10px; }
 
-.social-links {
-    position: fixed;
-    bottom: 0;
-    left: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* --- 5. SOCIAL SIDEBAR --- */
+.social-sidebar {
+    position: fixed; bottom: 0; left: 40px;
+    display: flex; flex-direction: column; gap: 20px;
 }
+.social-sidebar::after { content: ""; width: 1px; height: 90px; background: var(--slate); margin: 0 auto; }
+.social-sidebar a { color: var(--slate); font-size: 20px; }
+.social-sidebar a:hover { color: var(--teal); }
 
-.social-links::after {
-    content: "";
-    width: 1px;
-    height: 90px;
-    background: var(--slate);
-    margin: 0 auto;
+/* Mobile */
+@media (max-width: 768px) {
+    .skills-wrapper { grid-template-columns: 1fr; }
+    nav ul { display: none; }
 }
-
-.social-links i { font-size: 22px; color: var(--slate); transition: 0.3s; }
-.social-links i:hover { color: var(--teal); transform: translateY(-3px); }
