@@ -53,12 +53,10 @@ h2 {
 }
 
 .icon-grid img {
-    filter: grayscale(100%); /* Make the icons gray, like in a minimalist style */
     transition: 0.3s;
 }
 
 .icon-grid img:hover {
-    filter: grayscale(0%); /* The color appears when you hover your mouse over it */
     transform: translateY(-5px);
 }
 
