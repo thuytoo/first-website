@@ -3,53 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thuy To | Software Engineering Student</title>
+    <title>Thuy To | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="spotlight"></div>
 
-    <nav>
-        <div class="logo">TT</div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="mailto:your-email@example.com" class="resume-btn">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <div class="logo">TT</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="mailto:thuytoussh@gmail.com" class="resume-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section id="hero">
+            <p class="mono-text">Hi, my name is</p>
             <h1 class="big-heading">Thuy To.</h1>
             <h2 class="medium-heading">I build digital experiences.</h2>
-            <p class="description">
-                I'm a career switcher passionate about solving problems through code. 
-                My background in Hospitality helps me focus on user satisfaction and building products that truly serve people.
-            </p>
+            <p class="description">I'm a career switcher passionate about solving problems through code. My background in Hospitality and BIT helps me focus on user satisfaction.</p>
         </section>
 
         <section id="about">
             <h3 class="numbered-heading">About Me</h3>
-            <p>I am currently transitioning into the tech world, leveraging my service-oriented mindset to write cleaner, more efficient code. I enjoy the logic behind development and the creativity of front-end design.</p>
+            <div class="about-content">
+                <p>I am currently transitioning into the tech world, leveraging my service-oriented mindset to write cleaner, more efficient code.</p>
+                <ul class="skills-list">
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>HTML & CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h3 class="numbered-heading">Technical Skills</h3>
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h4><i class="fas fa-code"></i> Languages</h4>
+                    <ul><li>Java</li><li>Python</li><li>JavaScript</li><li>TypeScript</li></ul>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-layer-group"></i> Frameworks</h4>
+                    <ul><li>React & Next.js</li><li>HTML/CSS</li><li>Git/GitHub</li><li>AI Tools</li></ul>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-user-check"></i> Soft Skills</h4>
+                    <ul><li>User Satisfaction</li><li>Problem Solving</li><li>Agile Mindset</li><li>English</li></ul>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-rocket"></i> Focus</h4>
+                    <ul><li>Full-stack</li><li>UI/UX Design</li><li>Cloud Basics</li><li>AI Implementation</li></ul>
+                </div>
+            </div>
         </section>
 
         <section id="education">
             <h3 class="numbered-heading">Education</h3>
             <div class="edu-item">
-                <h4>Haaga-Helia UAS <span>| BIT</span></h4>
+                <h4>Haaga-Helia UAS <span class="accent">| BIT</span></h4>
                 <p class="range">2026 - Present</p>
             </div>
             <div class="edu-item">
-                <h4>Haaga-Helia UAS <span>| Hospitality</span></h4>
+                <h4>Haaga-Helia UAS <span class="accent">| Hospitality</span></h4>
                 <p class="range">2024 - 2026</p>
-            </div>
-            <div class="edu-item">
-                <h4>Metropolia UAS <span>| Open UAS Courses</span></h4>
             </div>
         </section>
 
-        <div class="social-links">
+        <div class="social-sidebar">
             <a href="https://github.com/thuytoo" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/thuy-to-fin88/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="mailto:thuytoussh@gmail.com"><i class="fas fa-envelope"></i></a>
