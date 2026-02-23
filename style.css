@@ -5,7 +5,7 @@
     --light-grey: #1d1d1d;
     --slate: #8892b0;
     --white: #e6f1ff;
-    --teal: #64ffda; /* Màu xanh gốc */
+    --teal: #64ffda; /* Original blue */
     --teal-tint: rgba(100, 255, 218, 0.1);
 }
 
@@ -33,7 +33,7 @@ nav {
 }
 
 nav ul {
-    display: flex; /* Đưa các chữ về hàng ngang */
+    display: flex; /* Move the letters to the horizontal row */
     list-style: none;
     gap: 30px;
     margin: 0; padding: 0;
@@ -47,26 +47,26 @@ nav a {
 }
 
 nav a:hover { color: var(--teal); }
-/* --- TẠO KHUNG CHO LOGO TT --- */
+/* --- CREATE A FRAME FOR LOGO TT --- */
 .logo {
-    color: var(--teal);             /* Màu chữ xanh */
-    text-decoration: none;          /* Bỏ gạch chân */
-    font-family: monospace;         /* Font chữ kiểu code */
+    color: var(--teal);             /* Blue text */
+    text-decoration: none;          /* Remove the underline */
+    font-family: monospace;         /* Code-style font */
     font-weight: bold;
     font-size: 18px;
     
-    /* Cấu hình khung giống nút Contact */
-    border: 2px solid var(--teal);  /* Viền xanh */
-    padding: 5px 10px;              /* Khoảng cách chữ và viền */
-    border-radius: 4px;             /* Bo góc nhẹ */
+    /* Frame configuration similar to the Contact button */
+    border: 2px solid var(--teal);  /* Blue border */
+    padding: 5px 10px;              /* Text and border spacing */
+    border-radius: 4px;             /* Slightly rounded corners */
     
-    transition: all 0.3s ease;      /* Hiệu ứng mượt */
+    transition: all 0.3s ease;      /* Smooth effect */
     display: inline-block;
 }
 
 .logo:hover {
-    background: var(--teal-tint);   /* Nền mờ khi di chuột vào */
-    transform: translateY(-2px);    /* Nhảy nhẹ lên trên */
+    background: var(--teal-tint);   /* The background becomes blurry when you hover over it */
+    transform: translateY(-2px);    /* Jump lightly upwards */
 }
 
 .resume-btn {
@@ -76,7 +76,7 @@ nav a:hover { color: var(--teal); }
     color: var(--teal) !important;
 }
 
-/* --- 3. MÀU SẮC HERO SECTION --- */
+/* --- 3. COLORS HERO SECTION --- */
 main { padding: 0 10%; max-width: 1000px; margin: auto; }
 section { padding: 80px 0; }
 .mono-text { font-family: monospace; color: var(--teal); } /* Hi my name is */
@@ -97,7 +97,7 @@ section { padding: 80px 0; }
     background: var(--dark-grey);
     padding: 25px;
     border-radius: 8px;
-    border-left: 3px solid var(--teal); /* Vạch xanh */
+    border-left: 3px solid var(--teal); /* Green line */
 }
 
 .skill-category h4 { color: var(--white); margin-top: 0; }
